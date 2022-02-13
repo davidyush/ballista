@@ -19,9 +19,9 @@ func create_state() -> void:
 func add_wave(wave: Array) -> void:
 	_state["waves"].push_back(wave)
 
-func create_enemy(type, spawn: int, delay: float) -> Dictionary:
+func create_spawn(enemies: Array, spawn: int, delay: float) -> Dictionary:
 		return {
-			"type": type,
+			"enemies": enemies,
 			"spawn": spawn,
 			"delay": delay,
 			"alive": true,
