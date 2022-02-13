@@ -2,6 +2,7 @@ extends Node2D
 
 export (Array, PackedScene) var enemies
 export (bool) var loop = false
+export (float) var delay = 0.0
 
 onready var path_follow := $Path2D/PathFollow2D
 
@@ -13,17 +14,19 @@ var current_instance :KinematicBody2D = null
 func _ready() -> void:
 	path_follow.loop = loop
 	enemies_count = enemies.size()
+	yield(get_tree().create_timer(delay), "timeout") 
 	set_enemy(current_index)
-	
-func _process(delta):
+
+func _physics_process(delta: float) -> void:
 	path_follow.offset += current_speed * delta
 	#good for now, but better to have a signal and not to check it here every time
 	if current_instance != null and current_instance.is_dead:
-		current_instance.queue_free()
 		path_follow.offset = 0
 		if current_index + 1 != enemies_count:
 			current_index += 1
 			set_enemy(current_index)
+		else:
+			queue_free()
 
 func set_enemy(index: int) -> void:
 	current_instance = enemies[index].instance()

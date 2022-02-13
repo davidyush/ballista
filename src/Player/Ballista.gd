@@ -1,6 +1,6 @@
 extends Node2D
 
-const Bullet := preload("res://src/Kata/Bullet.tscn")
+const Bullet := preload("res://src/Player/Bullet.tscn")
 
 onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
@@ -21,6 +21,7 @@ func instance_scene_on_main(scene: PackedScene, position: Vector2, rotation: flo
 	main.add_child(instance)
 	instance.global_position = position
 	instance.rotation = rotation
+	instance.life_time = life_time
 	instance.velocity = Vector2.RIGHT.rotated(rotation) * 300 * life_time 
 	yield(get_tree().create_timer(life_time), "timeout")
 	instance.queue_free()

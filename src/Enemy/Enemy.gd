@@ -10,4 +10,6 @@ var is_dead := false
 
 func _on_Hurtbox_hit(damage):
 	print('enemy has been damaged')
+	is_dead = true
 	queue_free()
+
