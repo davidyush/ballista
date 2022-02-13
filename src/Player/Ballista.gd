@@ -18,13 +18,11 @@ func release_bullet() -> float:
 func instance_scene_on_main(scene: PackedScene, position: Vector2, rotation: float, life_time: float) -> void:
 	var main := get_tree().current_scene
 	var instance := scene.instance()
-	main.add_child(instance)
 	instance.global_position = position
 	instance.rotation = rotation
 	instance.life_time = life_time
-	instance.velocity = Vector2.RIGHT.rotated(rotation) * 300 * life_time 
-	yield(get_tree().create_timer(life_time), "timeout")
-	instance.queue_free()
+	instance.velocity = Vector2.RIGHT.rotated(rotation) * 300 * life_time * 2
+	main.add_child(instance)
 
 func _process(delta: float) -> void:
 	var _rotation := get_local_mouse_position().angle()
