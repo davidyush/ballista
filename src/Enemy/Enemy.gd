@@ -5,8 +5,8 @@ export (float) var damage = 0.0
 export (float) var health = 1.0
 export (float) var armor = 0.0
 export (float) var delay = 2.0
+export (bool) var is_looped := false
 var is_dead := false
-var is_looped := false
 
 #TODO: type of armor (by Resource probably)
 

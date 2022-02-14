@@ -10,7 +10,6 @@ var current_speed := 0
 var current_instance :KinematicBody2D = null
 
 func _ready() -> void:
-	
 	enemies_count = enemies.size()
 	set_enemy(current_index)
 
@@ -28,7 +27,7 @@ func _physics_process(delta: float) -> void:
 
 func set_enemy(index: int) -> void:
 	current_instance = enemies[index].instance()
-	path_follow.loop = current_instance.loop
+	path_follow.loop = current_instance.is_looped
 	yield(get_tree().create_timer(current_instance.delay), "timeout")
 	current_speed = current_instance.speed
 	path_follow.add_child(current_instance)
