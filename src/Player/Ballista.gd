@@ -2,6 +2,9 @@ extends Node2D
 
 const Bullet := preload("res://src/Player/Bullet.tscn")
 
+var PlayerStats = ResourceLoader.PlayerStats
+var MainInstances = ResourceLoader.MainInstances
+
 onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
 
@@ -24,6 +27,13 @@ func instance_scene_on_main(scene: PackedScene, position: Vector2, rotation: flo
 	instance.velocity = Vector2.RIGHT.rotated(rotation) * 300 * life_time * 2
 	main.add_child(instance)
 
+func _on_died_Player() -> void:
+	print('player is dead')
+
+func _ready():
+	MainInstances.Player = self
+	PlayerStats.connect("player_deid", self, "_on_died_Player")
+
 func _process(delta: float) -> void:
 	var _rotation := get_local_mouse_position().angle()
 	Kata.rotation_degrees = int(rad2deg(_rotation))
@@ -32,3 +42,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("click"):
 		var time_passed := release_bullet();
 		instance_scene_on_main(Bullet, Muzzle.global_position, _rotation, time_passed)
+
+func _exit_tree():
+	MainInstances.Player = null
