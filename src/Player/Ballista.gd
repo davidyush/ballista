@@ -30,7 +30,7 @@ func instance_scene_on_main(scene: PackedScene, position: Vector2, rotation: flo
 func _on_died_Player() -> void:
 	print('player is dead')
 
-func _ready():
+func _ready() -> void:
 	MainInstances.Player = self
 	PlayerStats.connect("player_deid", self, "_on_died_Player")
 
@@ -43,5 +43,8 @@ func _process(delta: float) -> void:
 		var time_passed := release_bullet();
 		instance_scene_on_main(Bullet, Muzzle.global_position, _rotation, time_passed)
 
-func _exit_tree():
+func _exit_tree() -> void:
 	MainInstances.Player = null
+
+func _on_Hurtbox_hit(damage: float) -> void:
+	print('Player got damage ', damage)

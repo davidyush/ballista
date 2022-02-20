@@ -37,4 +37,6 @@ collision_layer = 1
 position = Vector2( -0.5, 0 )
 shape = SubResource( 2 )
 
+[connection signal="hit" from="Kata/Hurtbox" to="." method="_on_Hurtbox_hit"]
+
 [editable path="Kata/Hurtbox"]

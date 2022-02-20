@@ -12,7 +12,7 @@ func _ready():
 	timer.wait_time = max(life_time - 0.2, 0.1)
 	timer.start()
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	position += velocity * delta
 
 func _on_Timer_timeout():

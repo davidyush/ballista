@@ -11,7 +11,8 @@ export (float) var fear_time := 0.5
 
 var is_dead := false
 
-func _on_Hurtbox_hit(damage):
+func _on_Hurtbox_hit(damage: float):
+	print('enemy got damage ', damage)
 	print('enemy has been damaged')
 	is_dead = true
 	queue_free()
