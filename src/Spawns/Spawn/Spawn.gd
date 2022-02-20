@@ -1,8 +1,10 @@
 extends Node2D
 
-export (Array, PackedScene) var enemies
-
 onready var path_follow := $Path2D/PathFollow2D
+
+export (Array, PackedScene) var enemies
+export (bool) var is_looped := false
+export (float) var delay := 0.0 
 
 var enemies_count := 0
 var current_index := 0
@@ -11,6 +13,7 @@ var current_instance :KinematicBody2D = null
 
 func _ready() -> void:
 	enemies_count = enemies.size()
+	path_follow.loop = is_looped
 	set_enemy(current_index)
 
 func _physics_process(delta: float) -> void:
@@ -27,7 +30,6 @@ func _physics_process(delta: float) -> void:
 
 func set_enemy(index: int) -> void:
 	current_instance = enemies[index].instance()
-	path_follow.loop = current_instance.is_looped
-	yield(get_tree().create_timer(current_instance.delay), "timeout")
+	yield(get_tree().create_timer(delay), "timeout")
 	current_speed = current_instance.speed
 	path_follow.add_child(current_instance)

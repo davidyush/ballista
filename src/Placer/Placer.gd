@@ -7,8 +7,8 @@ var current_position := 'f2';
 
 func set_container_postion(_position: String) -> void:
 	if (current_position == 'f1' and _position == 'f3') or (current_position == 'f3' and _position == 'f1'):
-		print('cannot replace')
-	else	:
+		printerr('cannot replace')
+	else:
 		Container.global_position = positions[_position]
 		current_position = _position
 

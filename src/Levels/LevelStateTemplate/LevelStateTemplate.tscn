@@ -36,11 +36,17 @@ position = Vector2( 103, 0 )
 [node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
 curve = SubResource( 1 )
 
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn/Path2D" index="0"]
+position = Vector2( 1, 0 )
+
 [node name="Spawn2" parent="SpawnsMelee" instance=ExtResource( 3 )]
 position = Vector2( 243, 0 )
 
 [node name="Path2D" parent="SpawnsMelee/Spawn2" index="0"]
 curve = SubResource( 2 )
+
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn2/Path2D" index="0"]
+position = Vector2( 1, 0 )
 
 [node name="Spawn3" parent="SpawnsMelee" instance=ExtResource( 3 )]
 position = Vector2( 385, 0 )
@@ -48,10 +54,15 @@ position = Vector2( 385, 0 )
 [node name="Path2D" parent="SpawnsMelee/Spawn3" index="0"]
 curve = SubResource( 3 )
 
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn3/Path2D" index="0"]
+position = Vector2( 1, 0 )
+
 [node name="SpawnsRange" type="Node2D" parent="."]
 position = Vector2( 0, 97 )
 
 [node name="Spawn" parent="SpawnsRange" instance=ExtResource( 3 )]
+position = Vector2( 0, 3 )
+is_looped = true
 
 [node name="Path2D" parent="SpawnsRange/Spawn" index="0"]
 curve = SubResource( 4 )

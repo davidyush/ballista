@@ -4,11 +4,12 @@ export (float) var speed = 50.0
 export (float) var damage = 0.0
 export (float) var health = 1.0
 export (float) var armor = 0.0
-export (float) var delay = 2.0
-export (bool) var is_looped := false
-var is_dead := false
+export (String, "nope", "light", "medium", "heavy") var armor_type = "nope"
+export (String, "nope", "common", "magic") var atack_type = "common"
+export (float)var stun_time := 0.5
+export (float) var fear_time := 0.5
 
-#TODO: type of armor (by Resource probably)
+var is_dead := false
 
 func _on_Hurtbox_hit(damage):
 	print('enemy has been damaged')

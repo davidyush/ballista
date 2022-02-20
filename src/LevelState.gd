@@ -19,18 +19,18 @@ func create_state() -> void:
 func add_wave(wave: Array) -> void:
 	_state["waves"].push_back(wave)
 
-func create_enemy(type: String, delay: float, loop: bool) -> Dictionary:
+func create_enemy(type: String, delay: float) -> Dictionary:
 		return {
 			"type": type,
 			"delay": delay,
-			"loop": loop,
 			"alive": true,
 		}
 
-func create_spawn(enemies: Array, spawn: int) -> Dictionary:
+func create_spawn(enemies: Array, spawn: int, loop: bool) -> Dictionary:
 	return {
 		"enemies": enemies,
 		"spawn": spawn,
+		"loop": loop,
 	}
 
 func is_wave_ended(index: int) -> bool:
