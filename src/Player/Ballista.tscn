@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/assets/ballista.png" type="Texture" id=1]
 [ext_resource path="res://src/Player/Ballista.gd" type="Script" id=2]
 [ext_resource path="res://src/CollisionBoxes/Hurtbox/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/CollisionBoxes/VectorCreator/VectorCreator.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.5, 12 )
@@ -37,6 +38,9 @@ collision_layer = 1
 position = Vector2( -0.5, 0 )
 shape = SubResource( 2 )
 
+[node name="VectorCreator" parent="." instance=ExtResource( 4 )]
+
 [connection signal="hit" from="Kata/Hurtbox" to="." method="_on_Hurtbox_hit"]
+[connection signal="vector_created" from="VectorCreator" to="." method="_on_VectorCreator_vector_created"]
 
 [editable path="Kata/Hurtbox"]

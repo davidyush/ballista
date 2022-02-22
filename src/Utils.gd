@@ -7,6 +7,11 @@ func instance_scene_on_main(scene: PackedScene, position: Vector2) -> Node:
 	instance.global_position = position
 	return instance
 
+func create_instance(scene: PackedScene, position: Vector2) -> Node:
+	var instance := scene.instance()
+	instance.global_position = position
+	return instance
+
 func get_random(min_num: int, max_num: int) -> int:
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()

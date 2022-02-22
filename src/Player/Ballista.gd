@@ -9,6 +9,7 @@ onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
 
 var time_start := 0
+var time_passed := 0
 
 func start_bullet() -> void:
 	time_start = OS.get_ticks_msec();
@@ -34,17 +35,23 @@ func _ready() -> void:
 	MainInstances.Player = self
 	PlayerStats.connect("player_deid", self, "_on_died_Player")
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var _rotation := get_local_mouse_position().angle()
 	Kata.rotation_degrees = int(rad2deg(_rotation))
 	if Input.is_action_just_pressed("click"):
 		start_bullet()
 	if Input.is_action_just_released("click"):
-		var time_passed := release_bullet();
-		instance_scene_on_main(Bullet, Muzzle.global_position, _rotation, time_passed)
+		time_passed = release_bullet();
+#		instance_scene_on_main(Bullet, Muzzle.global_position, _rotation, time_passed)
 
 func _exit_tree() -> void:
 	MainInstances.Player = null
 
 func _on_Hurtbox_hit(damage: float) -> void:
 	print('Player got damage ', damage)
+
+func _on_VectorCreator_vector_created(vector: Vector2):
+	var instance = Utils.create_instance(Bullet, Muzzle.global_position)
+	instance.life_time = 1.0
+	instance.velocity = vector * 2
+	get_tree().current_scene.add_child(instance)

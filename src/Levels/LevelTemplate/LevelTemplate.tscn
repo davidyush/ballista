@@ -80,6 +80,9 @@ position = Vector2( 194, 258 )
 
 [node name="Cata" parent="Placer/Container" index="0" instance=ExtResource( 2 )]
 
+[node name="VectorCreator" parent="Placer/Container/Cata" index="1"]
+position = Vector2( 39, -122 )
+
 [node name="MeleeAtackArea" parent="." instance=ExtResource( 5 )]
 position = Vector2( 222, 235 )
 
@@ -88,3 +91,5 @@ position = Vector2( 222, 235 )
 [editable path="MeleeSpawns/Spawn3"]
 [editable path="RangeSpawns/Spawn"]
 [editable path="Placer"]
+[editable path="Placer/Container/Cata"]
+[editable path="Placer/Container/Cata/Kata/Hurtbox"]
