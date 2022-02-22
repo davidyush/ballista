@@ -8,6 +8,7 @@ var MainInstances = ResourceLoader.MainInstances
 onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
 
+const SPEED := 200
 var time_start := 0.0
 var time_passed := 0.0
 var is_changing_rotation = true
@@ -44,5 +45,5 @@ func _on_VectorCreator_vector_created(vector: Vector2):
 	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)
 	release_bullet()
 	instance.life_time = time_passed
-	instance.velocity = vector
+	instance.velocity = vector.normalized() * SPEED
 	get_tree().current_scene.add_child(instance)
