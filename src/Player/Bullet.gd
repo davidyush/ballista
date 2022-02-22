@@ -9,7 +9,7 @@ var life_time := 0.0
 func _ready():
 	hitbox.monitoring = false
 	print(float(life_time))
-	timer.wait_time = max(life_time - 0.2, 0.1)
+	timer.wait_time = max(life_time, 0.1)
 	timer.start()
 
 func _physics_process(delta: float) -> void:
