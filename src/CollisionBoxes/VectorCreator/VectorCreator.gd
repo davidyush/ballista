@@ -16,6 +16,8 @@ func _ready() -> void:
 
 func _draw() -> void:
 	draw_line(position_start - global_position, position_end - global_position, Color.orange, 4)
+	if position_end != Vector2.ZERO:
+		draw_line(position_start - global_position, ResourceLoader.MainInstances.Player.global_position - global_position, Color.aqua, 2)
 
 func _reset() -> void:
 	position_start = Vector2.ZERO

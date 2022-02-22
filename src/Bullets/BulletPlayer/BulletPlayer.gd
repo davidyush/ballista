@@ -1,9 +1,8 @@
-extends Area2D
+extends "res://src/Bullets/Bullet.gd"
 
 onready var hitbox := $Hitbox
 onready var timer := $Timer
 
-var velocity := Vector2.ZERO
 var life_time := 0.0
 
 func _ready():
@@ -11,9 +10,6 @@ func _ready():
 	print(float(life_time))
 	timer.wait_time = max(life_time, 0.1)
 	timer.start()
-
-func _physics_process(delta: float) -> void:
-	position += velocity * delta
 
 func _on_Timer_timeout():
 	hitbox.monitoring = true

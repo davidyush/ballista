@@ -1,6 +1,6 @@
 extends Node2D
 
-const Bullet := preload("res://src/Player/Bullet.tscn")
+const BulletPlayer := preload("res://src/Bullets/BulletPlayer/BulletPlayer.tscn")
 
 var PlayerStats = ResourceLoader.PlayerStats
 var MainInstances = ResourceLoader.MainInstances
@@ -37,11 +37,11 @@ func _physics_process(delta: float) -> void:
 func _exit_tree() -> void:
 	MainInstances.Player = null
 
-func _on_Hurtbox_hit(damage: float) -> void:
-	print('Player got damage ', damage)
+func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
+	print('Player got damage ', damage, attack_type)
 
 func _on_VectorCreator_vector_created(vector: Vector2):
-	var instance = Utils.create_instance(Bullet, Muzzle.global_position)
+	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)
 	release_bullet()
 	instance.life_time = time_passed
 	instance.velocity = vector
