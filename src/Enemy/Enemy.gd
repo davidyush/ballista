@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export (float) var speed := 50.0
-export (float) var damage := 0.0
+export (float) var damage := 1.0
 export (float) var health := 1.0
 export (float) var armor := 0.0
 export (String, "nope", "light", "medium", "heavy") var armor_type = "nope"

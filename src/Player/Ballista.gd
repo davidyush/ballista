@@ -23,10 +23,12 @@ func release_bullet() -> void:
 
 func _on_died_Player() -> void:
 	print('player is dead')
+	queue_free()
 
 func _ready() -> void:
 	MainInstances.Player = self
-	PlayerStats.connect("player_deid", self, "_on_died_Player")
+	print(PlayerStats.health)
+	PlayerStats.connect("player_died", self, "_on_died_Player")
 
 func _physics_process(delta: float) -> void:
 	if is_changing_rotation:
@@ -39,6 +41,7 @@ func _exit_tree() -> void:
 	MainInstances.Player = null
 
 func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
+	PlayerStats.health -= damage
 	print('Player got damage ', damage, attack_type)
 
 func _on_VectorCreator_vector_created(vector: Vector2):
