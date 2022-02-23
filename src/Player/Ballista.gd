@@ -27,10 +27,9 @@ func _on_died_Player() -> void:
 
 func _ready() -> void:
 	MainInstances.Player = self
-	print(PlayerStats.health)
 	PlayerStats.connect("player_died", self, "_on_died_Player")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_changing_rotation:
 		var _rotation := get_local_mouse_position().angle()
 		Kata.rotation_degrees = int(rad2deg(_rotation))
