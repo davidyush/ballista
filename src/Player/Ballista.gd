@@ -14,7 +14,7 @@ var time_passed := 0.0
 var is_changing_rotation = true
 
 func start_bullet() -> void:
-	time_start = OS.get_ticks_msec();
+	time_start = OS.get_ticks_msec()
 	is_changing_rotation = false
 
 func release_bullet() -> void:
@@ -43,7 +43,7 @@ func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
 	PlayerStats.health -= damage
 	print('Player got damage ', damage, attack_type)
 
-func _on_VectorCreator_vector_created(vector: Vector2):
+func _on_VectorCreator_vector_created(vector: Vector2) -> void:
 	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)
 	release_bullet()
 	instance.life_time = time_passed

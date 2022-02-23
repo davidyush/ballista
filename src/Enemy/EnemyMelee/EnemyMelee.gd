@@ -12,6 +12,6 @@ func _physics_process(delta: float) -> void:
 	elif not is_attacking and not timer.is_stopped():
 		timer.stop()
 	
-func _on_Timer_timeout():
+func _on_Timer_timeout() -> void:
 	print('meele attacks by ', damage)
 	PlayerStats.health -= damage
