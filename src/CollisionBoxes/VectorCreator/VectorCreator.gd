@@ -1,5 +1,8 @@
 extends Area2D
 
+onready var line := $Line2D
+onready var ballista_line := $BallistaLine
+
 signal vector_created(vector)
 
 var MainInstances = ResourceLoader.MainInstances
@@ -14,10 +17,17 @@ var vector := Vector2.ZERO
 func _ready() -> void:
 	connect("input_event", self, "_on_input_event")
 
-func _draw() -> void:
-	draw_line(position_start - global_position, position_end - global_position, Color.orange, 4)
+func _physics_process(delta: float) -> void:
 	if position_end != Vector2.ZERO:
-		draw_line(position_start - global_position, ResourceLoader.MainInstances.Player.global_position - global_position, Color.aqua, 2)
+		line.points = [position_start - global_position, position_end - global_position]
+		line.default_color = Color.orange
+		ballista_line.points = [position_start - global_position, ResourceLoader.MainInstances.Player.global_position - global_position]
+		ballista_line.default_color = Color.aqua
+	
+#func _draw() -> void:
+	#draw_line(position_start - global_position, position_end - global_position, Color.orange, 4)
+	#if position_end != Vector2.ZERO:
+	#	draw_line(position_start - global_position, ResourceLoader.MainInstances.Player.global_position - global_position, Color.aqua, 2)
 
 func _reset() -> void:
 	position_start = Vector2.ZERO
@@ -32,6 +42,8 @@ func _input(event) -> void:
 	if event.is_action_released("ui_touch"):
 		touch_down = false
 		emit_signal("vector_created", vector)
+		ballista_line.points = []
+		line.points = []
 		_reset()
 
 	if event is InputEventMouseMotion:
@@ -43,4 +55,5 @@ func _on_input_event(_viewport, event, _shape_idx) -> void:
 	if event.is_action_pressed("ui_touch"):
 		touch_down = true
 		position_start = event.position
+
 

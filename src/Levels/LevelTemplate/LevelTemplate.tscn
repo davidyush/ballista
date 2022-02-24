@@ -76,7 +76,7 @@ curve = SubResource( 4 )
 position = Vector2( 0, 1 )
 
 [node name="Placer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 194, 258 )
+position = Vector2( 207, 258 )
 
 [node name="Cata" parent="Placer/Container" index="0" instance=ExtResource( 2 )]
 
