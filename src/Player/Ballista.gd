@@ -43,9 +43,9 @@ func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
 	PlayerStats.health -= damage
 	print('Player got damage ', damage, attack_type)
 
-func _on_VectorCreator_vector_created(vector: Vector2) -> void:
+func _on_VectorCreator_vector_created(vector: Vector2, distance: float) -> void:
 	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)
 	release_bullet()
 	instance.life_time = time_passed
-	instance.velocity = vector.normalized() * SPEED
+	instance.velocity = vector.normalized() * distance
 	get_tree().current_scene.add_child(instance)

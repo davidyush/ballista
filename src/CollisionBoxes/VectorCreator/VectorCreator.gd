@@ -13,6 +13,7 @@ var touch_down := false
 var position_start := Vector2.ZERO
 var position_end := Vector2.ZERO
 var vector := Vector2.ZERO
+var distance := 0.0
 
 func _ready() -> void:
 	connect("input_event", self, "_on_input_event")
@@ -20,15 +21,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if position_end != Vector2.ZERO:
 		line.points = [position_start - global_position, position_end - global_position]
+		distance = position_end.distance_to(position_start)
 		line.default_color = Color.orange
-		ballista_line.points = [position_start - global_position, ResourceLoader.MainInstances.Player.global_position - global_position]
+		ballista_line.points = [
+			position_start - global_position,
+			ResourceLoader.MainInstances.Player.global_position - global_position
+		]
 		ballista_line.default_color = Color.aqua
 	
-#func _draw() -> void:
-	#draw_line(position_start - global_position, position_end - global_position, Color.orange, 4)
-	#if position_end != Vector2.ZERO:
-	#	draw_line(position_start - global_position, ResourceLoader.MainInstances.Player.global_position - global_position, Color.aqua, 2)
-
 func _reset() -> void:
 	position_start = Vector2.ZERO
 	position_end = Vector2.ZERO
@@ -41,7 +41,7 @@ func _input(event) -> void:
 
 	if event.is_action_released("ui_touch"):
 		touch_down = false
-		emit_signal("vector_created", vector)
+		emit_signal("vector_created", vector, distance)
 		ballista_line.points = []
 		line.points = []
 		_reset()
