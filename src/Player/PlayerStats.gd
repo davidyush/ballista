@@ -1,7 +1,7 @@
 extends Resource
 class_name PlayerStatsClass
 
-var max_health := 10000
+var max_health := 100
 var health := max_health setget set_health
 
 signal player_died
