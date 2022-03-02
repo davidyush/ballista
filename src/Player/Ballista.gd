@@ -8,7 +8,6 @@ var MainInstances = ResourceLoader.MainInstances
 onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
 
-const SPEED := 200
 var time_start := 0.0
 var time_passed := 0.0
 var is_changing_rotation = true
