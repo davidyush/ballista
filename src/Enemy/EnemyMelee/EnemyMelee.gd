@@ -1,4 +1,4 @@
-extends "res://src/Enemy/Enemy.gd"
+extends Enemy
 
 var PlayerStats = ResourceLoader.PlayerStats
 

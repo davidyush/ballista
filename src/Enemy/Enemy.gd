@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Enemy
 
 export (float) var speed := 50.0
 export (float) var damage := 1.0
