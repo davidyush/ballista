@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Placer/Placer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Player/Ballista.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Levels/LevelTemplate/LevelTemplate.gd" type="Script" id=3]
+[ext_resource path="res://src/Spawns/Spawn/Spawn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/CollisionBoxes/MeleeAtackArea/MeleeAtackArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Tiles/Ground.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Tiles/Road.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Tiles/Grass.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[node name="LevelTemplate" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Environment" type="YSort" parent="."]
+
+[node name="Ground" parent="Environment" instance=ExtResource( 6 )]
+
+[node name="Road" parent="Environment" instance=ExtResource( 8 )]
+
+[node name="Grass" parent="Environment" instance=ExtResource( 11 )]
+
+[node name="SpawnsMelee" type="YSort" parent="."]
+
+[node name="Spawn" parent="SpawnsMelee" instance=ExtResource( 4 )]
+position = Vector2( 48, 0 )
+
+[node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn/Path2D" index="0"]
+position = Vector2( 247, 150 )
+
+[node name="Spawn2" parent="SpawnsMelee" instance=ExtResource( 4 )]
+position = Vector2( 208, 0 )
+
+[node name="Path2D" parent="SpawnsMelee/Spawn2" index="0"]
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn2/Path2D" index="0"]
+position = Vector2( 247, 150 )
+
+[node name="Spawn3" parent="SpawnsMelee" instance=ExtResource( 4 )]
+position = Vector2( 352, 0 )
+
+[node name="Path2D" parent="SpawnsMelee/Spawn3" index="0"]
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn3/Path2D" index="0"]
+position = Vector2( 247, 150 )
+
+[node name="SpawnsRange" type="YSort" parent="."]
+
+[node name="Spawn" parent="SpawnsRange" instance=ExtResource( 4 )]
+
+[node name="Path2D" parent="SpawnsRange/Spawn" index="0"]
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" parent="SpawnsRange/Spawn/Path2D" index="0"]
+position = Vector2( 247, 150 )
+
+[node name="Placer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 256 )
+
+[node name="Ballista" parent="Placer/Container" index="0" instance=ExtResource( 2 )]
+
+[node name="VectorCreator" parent="Placer/Container/Ballista" index="1"]
+position = Vector2( 16, -120 )
+
+[node name="MeleeAtackArea" parent="." instance=ExtResource( 5 )]
+position = Vector2( 256, 240 )
+
+[editable path="SpawnsMelee/Spawn"]
+[editable path="SpawnsMelee/Spawn2"]
+[editable path="SpawnsMelee/Spawn3"]
+[editable path="SpawnsRange/Spawn"]
+[editable path="Placer"]
+[editable path="Placer/Container/Ballista"]
+[editable path="Placer/Container/Ballista/Kata/Hurtbox"]
+[editable path="MeleeAtackArea"]

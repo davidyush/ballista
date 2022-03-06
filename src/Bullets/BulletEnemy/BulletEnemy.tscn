@@ -5,10 +5,10 @@
 [ext_resource path="res://src/Bullets/BulletEnemy/BulletEnemy.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 1.5 )
+extents = Vector2( 7, 0.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9, 2.5 )
+extents = Vector2( 8, 1.5 )
 
 [node name="BulletEnemy" instance=ExtResource( 1 )]
 script = ExtResource( 3 )

@@ -18,7 +18,14 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	path_follow.offset += current_speed * delta
-	#good for now, but better to have a signal and not to check it here every time
+
+func set_enemy(index: int) -> void:
+	current_instance = enemies[index].instance()
+	yield(get_tree().create_timer(delay), "timeout")
+	current_speed = current_instance.speed
+	path_follow.add_child(current_instance)
+
+func set_next() -> void:
 	if current_instance != null and current_instance.is_dead:
 		path_follow.offset = 0
 		current_speed = 0.0
@@ -26,10 +33,7 @@ func _physics_process(delta: float) -> void:
 			current_index += 1
 			set_enemy(current_index)
 		else:
+			var level = Utils.get_parent_by_name(self, 'Level')
+			if level != null:
+				level.is_level_completed()
 			queue_free()
-
-func set_enemy(index: int) -> void:
-	current_instance = enemies[index].instance()
-	yield(get_tree().create_timer(delay), "timeout")
-	current_speed = current_instance.speed
-	path_follow.add_child(current_instance)
