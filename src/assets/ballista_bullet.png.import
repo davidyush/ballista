@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex"
+path="res://.import/ballista_bullet.png-5807d3f6df71f0be0fc299a5cdc35893.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/Aim2.png"
-dest_files=[ "res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex" ]
+source_file="res://src/assets/ballista_bullet.png"
+dest_files=[ "res://.import/ballista_bullet.png-5807d3f6df71f0be0fc299a5cdc35893.stex" ]
 
 [params]
 

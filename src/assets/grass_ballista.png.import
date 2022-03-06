@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex"
+path="res://.import/grass_ballista.png-b5e913209cbcac07e1a8faf4e7e99b7d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/Aim2.png"
-dest_files=[ "res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex" ]
+source_file="res://src/assets/grass_ballista.png"
+dest_files=[ "res://.import/grass_ballista.png-b5e913209cbcac07e1a8faf4e7e99b7d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex"
+path="res://.import/road.png-fde5cc065ffe9ce55e9e4c01391e2d55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/Aim2.png"
-dest_files=[ "res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex" ]
+source_file="res://src/assets/road.png"
+dest_files=[ "res://.import/road.png-fde5cc065ffe9ce55e9e4c01391e2d55.stex" ]
 
 [params]
 
