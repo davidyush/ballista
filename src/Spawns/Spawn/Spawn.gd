@@ -34,6 +34,5 @@ func set_next() -> void:
 			set_enemy(current_index)
 		else:
 			var level = Utils.get_parent_by_name(self, 'Level')
-			if level != null:
-				level.is_level_completed()
+			level.is_level_completed()
 			queue_free()

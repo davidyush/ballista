@@ -19,13 +19,13 @@ func _ready() -> void:
 	print ('H_max ', H_max )
 	timer.start()
 #ss
-func _physics_process(delta: float) -> void:
-	._physics_process(delta)
-	H_current = 0.00000000001 + velocity.length() * sin(PI/4.0) * current_time - ( 9.8 * current_time * current_time) / 2.0
-	current_time += delta
+#func _physics_process(delta: float) -> void:
+	#._physics_process(delta)
+	#H_current = 0.00000000001 + velocity.length() * sin(PI/4.0) * current_time - ( 9.8 * current_time * current_time) / 2.0
+	#current_time += delta
 	#print ('current_time ' , current_time )
-	print ('H_current' , H_current )
-	scale.x= H_current/H_max
+	#print ('H_current' , H_current )
+	#scale.x= H_current/H_max
 	
 
 

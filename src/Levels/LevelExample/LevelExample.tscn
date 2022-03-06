@@ -360,7 +360,8 @@ position = Vector2( 465, 51 )
 
 [node name="Spawn" parent="SpawnsMelee" instance=ExtResource( 3 )]
 position = Vector2( 49, 1 )
-enemies = [ ExtResource( 1 ) ]
+enemies = [ ExtResource( 1 ), ExtResource( 1 ) ]
+delay = 2.0
 
 [node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
 curve = SubResource( 1 )

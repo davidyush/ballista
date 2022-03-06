@@ -28,7 +28,7 @@ func calc_damage(damage: float, armor: float, attack_type: String, armor_type: S
 
 func get_parent_by_name(current_node: Node, name: String) -> Node:
 	var current_parent = current_node.get_parent()
-	while true:
+	while current_parent != null:
 		if current_parent.name.begins_with(name):
 			return current_parent
 		else:
