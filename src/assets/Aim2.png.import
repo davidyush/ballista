@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Aim2.png-27a5dc1f1a1e7b8f89615546b64342dc.stex" ]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

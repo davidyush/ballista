@@ -1,4 +1,4 @@
-extends "res://src/Bullets/Bullet.gd"
+extends Bullet
 
 onready var hitbox := $Hitbox
 onready var timer := $Timer
