@@ -15,10 +15,10 @@ func _ready() -> void:
 	timer.wait_time = max(life_time, 0.1)
 	flight_time = velocity.length() * sin(PI/4.0) / 9.8
 	print ('flight_time ', flight_time)
-	H_max = 0.00000000001 + (velocity.length() * velocity.length() * sin(PI/4.0) * sin(PI/4.0) )/(2 * 9.8)
+	H_max = 0.00000000001 +  (velocity.length() * velocity.length() * sin(PI/4.0) * sin(PI/4.0) )/(2 * 9.8) 
 	print ('H_max ', H_max )
 	timer.start()
-
+#ss
 func _physics_process(delta: float) -> void:
 	._physics_process(delta)
 	H_current = 0.00000000001 + velocity.length() * sin(PI/4.0) * current_time - ( 9.8 * current_time * current_time) / 2.0
