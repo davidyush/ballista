@@ -47,4 +47,5 @@ func _on_VectorCreator_vector_created(vector: Vector2, speed: float) -> void:
 	release_bullet()
 	instance.life_time = time_passed
 	instance.velocity = vector.normalized() * speed
+	instance.rotation = Kata.rotation
 	get_tree().current_scene.add_child(instance)
