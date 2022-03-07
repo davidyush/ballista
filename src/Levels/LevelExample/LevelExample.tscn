@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/Placer/Placer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Player/Ballista.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://src/Tiles/Grass.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Tiles/Road2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Enemy/Infantryman/Infantryman.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Levels/LevelTemplate/LevelTemplate.gd" type="Script" id=14]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -35,6 +36,7 @@ _data = {
 }
 
 [node name="LevelExample" type="Node2D"]
+script = ExtResource( 14 )
 
 [node name="Environment" type="YSort" parent="."]
 
@@ -364,7 +366,7 @@ tile_data = PoolIntArray( -65534, 0, 0, -65533, 0, 2, -65525, 0, 0, -65524, 0, 2
 
 [node name="Spawn" parent="SpawnsMelee" instance=ExtResource( 4 )]
 position = Vector2( 49, 1 )
-enemies = [ ExtResource( 7 ) ]
+enemies = [ ExtResource( 7 ), ExtResource( 13 ) ]
 
 [node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
 curve = SubResource( 1 )
