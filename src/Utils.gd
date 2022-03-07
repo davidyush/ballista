@@ -21,4 +21,5 @@ func get_random(min_num: int, max_num: int) -> int:
 #armor types: "nope", "light", "medium", "heavy"
 #attack_types: "nope", "common", "magic"
 func calc_damage(damage: float, armor: float, attack_type: String, armor_type: String) -> float:
+	
 		return damage
