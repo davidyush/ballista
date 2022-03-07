@@ -22,8 +22,20 @@ func get_random(min_num: int, max_num: int) -> int:
 
 #armor types: "nope", "light", "medium", "heavy"
 #attack_types: "nope", "common", "magic"
-func calc_damage(damage: float, armor: float, attack_type: String, armor_type: String) -> float:
-	return damage
+
+func calc_damage(damage: float, armor: float, armor_coefficient: float, attack_type: String, armor_type: String) -> float:
+	var pure_damage := 0.0
+	var final_damage := 0.0
+	var ballista_attack := 1.0
+	
+	if armor_type == "heavy" :
+		print ('I can`t calculate this armor type yet')
+	else:
+		pure_damage = ballista_attack / (1.0 / armor_coefficient)
+		final_damage = abs(armor - pure_damage) 
+		print ('final_damage ', final_damage)
+		
+	return final_damage
 
 
 func get_parent_by_name(current_node: Node, name: String) -> Node:

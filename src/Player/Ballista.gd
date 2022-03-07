@@ -8,16 +8,16 @@ var MainInstances = ResourceLoader.MainInstances
 onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
 
-var time_start := 0.0
-var time_passed := 0.0
+#var time_start := 0.0
+#var time_passed := 0.0
 var is_changing_rotation = true
 
 func start_bullet() -> void:
-	time_start = OS.get_ticks_msec()
+#	time_start = OS.get_ticks_msec()
 	is_changing_rotation = false
 
 func release_bullet() -> void:
-	time_passed = (OS.get_ticks_msec() - time_start) / 1000.0;
+	#time_passed = (OS.get_ticks_msec() - time_start) / 1000.0;
 	is_changing_rotation = true
 
 func _on_died_Player() -> void:
@@ -45,7 +45,7 @@ func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
 func _on_VectorCreator_vector_created(vector: Vector2, speed: float) -> void:
 	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)
 	release_bullet()
-	instance.life_time = time_passed
+	instance.life_time =  speed * sin(PI/4.0) / 100
 	instance.velocity = vector.normalized() * speed
 	instance.rotation = Kata.rotation
 	get_tree().current_scene.add_child(instance)

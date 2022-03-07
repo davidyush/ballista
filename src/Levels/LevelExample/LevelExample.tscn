@@ -392,7 +392,7 @@ enemies = [ ExtResource( 13 ) ]
 curve = SubResource( 5 )
 
 [node name="PathFollow2D" parent="SpawnsMelee/Spawn3/Path2D" index="0"]
-position = Vector2( 353, -2 )
+position = Vector2( 352, -1 )
 
 [node name="SpawnsRange" type="YSort" parent="."]
 position = Vector2( 0, 3 )
