@@ -8,16 +8,12 @@ var MainInstances = ResourceLoader.MainInstances
 onready var Kata := $Kata
 onready var Muzzle := $Kata/Muzzle
 
-#var time_start := 0.0
-#var time_passed := 0.0
 var is_changing_rotation = true
 
 func start_bullet() -> void:
-#	time_start = OS.get_ticks_msec()
 	is_changing_rotation = false
 
 func release_bullet() -> void:
-	#time_passed = (OS.get_ticks_msec() - time_start) / 1000.0;
 	is_changing_rotation = true
 
 func _on_died_Player() -> void:

@@ -41,7 +41,11 @@ shape = SubResource( 2 )
 
 [node name="VectorCreator" parent="." instance=ExtResource( 4 )]
 
+[node name="CollisionShape2D" parent="VectorCreator" index="0"]
+visible = false
+
 [connection signal="hit" from="Kata/Hurtbox" to="." method="_on_Hurtbox_hit"]
 [connection signal="vector_created" from="VectorCreator" to="." method="_on_VectorCreator_vector_created"]
 
 [editable path="Kata/Hurtbox"]
+[editable path="VectorCreator"]

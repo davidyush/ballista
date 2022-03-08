@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/assets/rock_1.png" type="Texture" id=1]
+
+[node name="Rock1" type="Sprite"]
+position = Vector2( 304, 196 )
+texture = ExtResource( 1 )

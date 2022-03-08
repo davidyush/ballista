@@ -3,5 +3,4 @@
 [ext_resource path="res://src/assets/ball_tree_b.png" type="Texture" id=1]
 
 [node name="BallTreeB" type="Sprite"]
-position = Vector2( 362, 222 )
 texture = ExtResource( 1 )

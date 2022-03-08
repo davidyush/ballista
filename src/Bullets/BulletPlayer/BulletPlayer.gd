@@ -4,7 +4,7 @@ onready var hitbox := $Hitbox
 onready var timer := $Timer
 
 var life_time := 0.0
-const scaler := 3
+const scaler := 2
 #var flight_time := 0.0
 #var H_max := 0.00000000001
 #var H_current := 0.00000000001
