@@ -39,8 +39,7 @@ func _exit_tree() -> void:
 	MainInstances.Player = null
 
 func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
-	PlayerStats.health -= damage
-	print('Player got damage ', damage, attack_type)
+	PlayerStats.take_damage(damage, attack_type)
 
 func _on_VectorCreator_vector_created(vector: Vector2, speed: float) -> void:
 	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)

@@ -7,7 +7,6 @@
 [node name="MeleeAtackArea" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-monitoring = false
 monitorable = false
 script = ExtResource( 1 )
 

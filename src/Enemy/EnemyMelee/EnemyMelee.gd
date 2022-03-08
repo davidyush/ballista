@@ -13,5 +13,4 @@ func _physics_process(delta: float) -> void:
 		timer.stop()
 	
 func _on_Timer_timeout() -> void:
-	print('meele attacks by ', damage)
-	PlayerStats.health -= damage
+	PlayerStats.take_damage(damage, attack_type)

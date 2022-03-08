@@ -7,7 +7,6 @@ var positions: Dictionary;
 var current_position := 'f2';
 
 func set_container_postion(_position: String) -> void:
-	print(Container.global_position, positions[_position])
 	if (current_position == 'f1' and _position == 'f3') or (current_position == 'f3' and _position == 'f1'):
 		printerr('cannot replace')
 	else:
