@@ -8,6 +8,8 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Tween" type="Tween" parent="."]
+
 [node name="PositionA" type="Position2D" parent="."]
 
 [node name="PositionB" type="Position2D" parent="."]

@@ -411,7 +411,7 @@ position = Vector2( 0, 1 )
 [node name="Placer" parent="." instance=ExtResource( 1 )]
 position = Vector2( 207, 258 )
 
-[node name="PositionA" parent="Placer" index="0"]
+[node name="PositionA" parent="Placer" index="1"]
 modulate = Color( 1, 0.0941176, 0.0941176, 1 )
 
 [node name="Cata" parent="Placer/Container" index="0" instance=ExtResource( 2 )]
