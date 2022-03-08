@@ -426,3 +426,4 @@ position = Vector2( 222, 235 )
 [editable path="Placer"]
 [editable path="Placer/Container/Cata"]
 [editable path="Placer/Container/Cata/Kata/Hurtbox"]
+[editable path="Placer/Container/Cata/VectorCreator"]

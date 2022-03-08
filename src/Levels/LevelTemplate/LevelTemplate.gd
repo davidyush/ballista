@@ -7,6 +7,10 @@ onready var spawns_range = $SpawnsRange
 #do we need this var?
 var level_completed := false
 
+func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed('reset'):
+		get_tree().reload_current_scene()
+
 func is_level_completed() -> bool:
 	# TODO need to fix, this function runs before current removing path
 	# we can make sum of all children if there is only one then level is completed
