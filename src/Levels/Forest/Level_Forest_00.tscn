@@ -68,10 +68,10 @@ position = Vector2( 329, 38 )
 position = Vector2( 286, 39 )
 
 [node name="TreeB25" parent="Environment/Sprites" index="13" instance=ExtResource( 1 )]
-position = Vector2( 318, 6 )
+position = Vector2( 364, 13 )
 
 [node name="TreeB26" parent="Environment/Sprites" index="14" instance=ExtResource( 1 )]
-position = Vector2( 353, 8 )
+position = Vector2( 340, 16 )
 
 [node name="TreeB27" parent="Environment/Sprites" index="15" instance=ExtResource( 1 )]
 position = Vector2( 73, 134 )
@@ -179,7 +179,7 @@ position = Vector2( 100, 51 )
 position = Vector2( 97, 30 )
 
 [node name="BallTreeB13" parent="Environment/Sprites" index="50" instance=ExtResource( 4 )]
-position = Vector2( 97, 14 )
+position = Vector2( 95, 21 )
 
 [node name="BallTreeB14" parent="Environment/Sprites" index="51" instance=ExtResource( 4 )]
 position = Vector2( 112, 114 )
@@ -260,10 +260,10 @@ position = Vector2( 461, 172 )
 position = Vector2( 374, 247 )
 
 [node name="BallTreeB40" parent="Environment/Sprites" index="77" instance=ExtResource( 4 )]
-position = Vector2( 311, 260 )
+position = Vector2( 316, 250 )
 
 [node name="BallTreeB41" parent="Environment/Sprites" index="78" instance=ExtResource( 4 )]
-position = Vector2( 347, 256 )
+position = Vector2( 349, 247 )
 
 [node name="BallTreeB42" parent="Environment/Sprites" index="79" instance=ExtResource( 4 )]
 position = Vector2( 409, 243 )
@@ -275,13 +275,13 @@ position = Vector2( 433, 252 )
 position = Vector2( 453, 236 )
 
 [node name="BallTreeB45" parent="Environment/Sprites" index="82" instance=ExtResource( 4 )]
-position = Vector2( 465, 256 )
+position = Vector2( 413, 217 )
 
 [node name="BallTreeB46" parent="Environment/Sprites" index="83" instance=ExtResource( 4 )]
-position = Vector2( 473, 201 )
+position = Vector2( 469, 201 )
 
 [node name="BallTreeB47" parent="Environment/Sprites" index="84" instance=ExtResource( 4 )]
-position = Vector2( 186, 256 )
+position = Vector2( 189, 247 )
 
 [node name="BallTreeB48" parent="Environment/Sprites" index="85" instance=ExtResource( 4 )]
 position = Vector2( 151, 238 )
@@ -302,10 +302,10 @@ position = Vector2( 84, 247 )
 position = Vector2( 43, 252 )
 
 [node name="BallTreeB54" parent="Environment/Sprites" index="91" instance=ExtResource( 4 )]
-position = Vector2( 6, 244 )
+position = Vector2( 16, 228 )
 
 [node name="BallTreeB55" parent="Environment/Sprites" index="92" instance=ExtResource( 4 )]
-position = Vector2( 16, 262 )
+position = Vector2( 34, 220 )
 
 [node name="BallTreeB56" parent="Environment/Sprites" index="93" instance=ExtResource( 4 )]
 position = Vector2( 80, 218 )
@@ -320,13 +320,13 @@ position = Vector2( 97, 205 )
 position = Vector2( 32, 183 )
 
 [node name="BallTreeB60" parent="Environment/Sprites" index="97" instance=ExtResource( 4 )]
-position = Vector2( 8, 194 )
+position = Vector2( 13, 193 )
 
 [node name="BallTreeB61" parent="Environment/Sprites" index="98" instance=ExtResource( 4 )]
 position = Vector2( 44, 159 )
 
 [node name="BallTreeB62" parent="Environment/Sprites" index="99" instance=ExtResource( 4 )]
-position = Vector2( 16, 144 )
+position = Vector2( 17, 144 )
 
 [node name="BallTreeB63" parent="Environment/Sprites" index="100" instance=ExtResource( 4 )]
 position = Vector2( 51, 106 )
@@ -338,16 +338,16 @@ position = Vector2( 20, 67 )
 position = Vector2( 67, 55 )
 
 [node name="BallTreeB66" parent="Environment/Sprites" index="103" instance=ExtResource( 4 )]
-position = Vector2( 16, 27 )
+position = Vector2( 18, 27 )
 
 [node name="BallTreeB67" parent="Environment/Sprites" index="104" instance=ExtResource( 4 )]
-position = Vector2( 36, 8 )
+position = Vector2( 34, 20 )
 
 [node name="BallTreeB68" parent="Environment/Sprites" index="105" instance=ExtResource( 4 )]
-position = Vector2( 67, 0 )
+position = Vector2( 65, 22 )
 
 [node name="BallTreeB69" parent="Environment/Sprites" index="106" instance=ExtResource( 4 )]
-position = Vector2( 398, 3 )
+position = Vector2( 401, 21 )
 
 [node name="Rock4" parent="Environment/Sprites" index="107" instance=ExtResource( 3 )]
 
@@ -429,7 +429,7 @@ position = Vector2( 97, 239 )
 position = Vector2( 28, 215 )
 
 [node name="Rock37" parent="Environment/Sprites" index="134" instance=ExtResource( 8 )]
-position = Vector2( 47, 231 )
+position = Vector2( 66, 187 )
 
 [node name="Rock38" parent="Environment/Sprites" index="135" instance=ExtResource( 8 )]
 position = Vector2( 67, 170 )
@@ -450,7 +450,7 @@ position = Vector2( 51, 43 )
 position = Vector2( 28, 24 )
 
 [node name="Rock44" parent="Environment/Sprites" index="141" instance=ExtResource( 8 )]
-position = Vector2( 59, 24 )
+position = Vector2( 72, 81 )
 
 [node name="Rock60" parent="Environment/Sprites" index="142" instance=ExtResource( 8 )]
 position = Vector2( 194, 156 )
@@ -537,6 +537,9 @@ enemies = [ ExtResource( 9 ) ]
 
 [node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
 curve = SubResource( 1 )
+
+[node name="Placer" parent="." index="3"]
+position = Vector2( 229, 256 )
 
 [node name="MeleeAtackArea" parent="." index="4"]
 position = Vector2( 256, 224 )
