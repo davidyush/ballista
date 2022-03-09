@@ -1,6 +1,8 @@
 extends Node2D
 class_name Level
 
+export (String, FILE, "*.tscn") var next_level
+
 onready var spawns_melee = $SpawnsMelee
 onready var spawns_range = $SpawnsRange
 
@@ -17,6 +19,7 @@ func is_level_completed() -> bool:
 	if spawns_melee.get_child_count() + spawns_range.get_child_count() == 1:
 		level_completed = true
 		print('go to the next level')
+		get_tree().change_scene(next_level)
 		return true
 	print('Level ISN\'T completed')
 	return false
