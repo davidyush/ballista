@@ -551,3 +551,4 @@ position = Vector2( 256, 224 )
 [editable path="Placer/Container/Ballista/Kata/Hurtbox"]
 [editable path="Placer/Container/Ballista/VectorCreator"]
 [editable path="MeleeAtackArea"]
+[editable path="PauseMenu"]
