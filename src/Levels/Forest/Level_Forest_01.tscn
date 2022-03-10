@@ -24,7 +24,7 @@ _data = {
 
 [node name="Level_forest_01" instance=ExtResource( 1 )]
 position = Vector2( 0, -2 )
-next_level = "res://src/Levels/LevelExample/LevelExample.tscn"
+next_level = "res://src/Levels/Forest/Level_Forest_02.tscn"
 
 [node name="Environment" parent="." index="0"]
 position = Vector2( 0, 2 )
@@ -109,6 +109,9 @@ position = Vector2( -20, 4 )
 [node name="Spawn2" parent="SpawnsMelee" index="1" instance=ExtResource( 3 )]
 position = Vector2( 461, 24 )
 enemies = [ ExtResource( 7 ), ExtResource( 7 ) ]
+
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn2/Path2D" index="0"]
+position = Vector2( -2, 10 )
 
 [node name="SpawnsRange" parent="." index="4"]
 position = Vector2( 13, 107 )
