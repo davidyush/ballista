@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/Spawns/Spawn/Spawn.gd" type="Script" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, -201, 211, 0, 0, 0, 0, -207, 216 )
+}
 
 [node name="Spawn" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -1, -1 )
 rotate = false
 loop = false

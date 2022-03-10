@@ -39,6 +39,9 @@ enemies = [ ExtResource( 9 ) ]
 [node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
 curve = SubResource( 1 )
 
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn/Path2D" index="0"]
+position = Vector2( 0, 16 )
+
 [node name="Placer" parent="." index="3"]
 position = Vector2( 229, 256 )
 
@@ -51,4 +54,3 @@ position = Vector2( 256, 224 )
 [editable path="Placer/Container/Ballista/Kata/Hurtbox"]
 [editable path="Placer/Container/Ballista/VectorCreator"]
 [editable path="MeleeAtackArea"]
-[editable path="PauseMenu"]
