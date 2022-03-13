@@ -17,6 +17,7 @@ func _on_Hurtbox_hit(_damage: float, _attack_type: String) -> void:
 	print('enemy got damage ', _damage, _attack_type)
 	var final_damage = Utils.calc_damage(_damage, armor, armor_coefficient, _attack_type, armor_type)
 	health -= final_damage
+	GlobalStatistics.increment_hits()
 	if health <= 0.0:
 		is_dead = true
 		var spawn = Utils.get_parent_by_name(self, 'Spawn')

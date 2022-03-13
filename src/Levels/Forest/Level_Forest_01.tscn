@@ -27,7 +27,7 @@ _data = {
 "points": PoolVector2Array( 15.368, 5.34539, -15.368, -5.34539, -5.2619, 51.8339, 0.409313, 11.134, -0.409313, -11.134, -22.0972, 18.8977, -16.0967, 8.95215, 16.0967, -8.95215, -2.8842, -14.747, -10.5503, -5.23949, 10.5503, 5.23949, 41.1207, -15.4869, 0.198725, -12.4709, -0.198725, 12.4709, 58.1807, 13.6736, 9.62685, -11.9799, -9.62685, 11.9799, 48.7458, 46.2689, 0, 0, 0, 0, 20.2035, 58.064, 11.359, 4.67722, -11.359, -4.67722, -5.2619, 51.8339 )
 }
 
-[node name="Level_forest_01" instance=ExtResource( 1 )]
+[node name="Level_Forest_01" instance=ExtResource( 1 )]
 position = Vector2( 0, -2 )
 next_level = "res://src/Levels/Forest/Level_Forest_02.tscn"
 
@@ -109,7 +109,7 @@ position = Vector2( -1, -12 )
 curve = SubResource( 4 )
 
 [node name="PathFollow2D" parent="SpawnsMelee/Spawn/Path2D" index="0"]
-position = Vector2( -20, 4 )
+position = Vector2( 0, 16 )
 
 [node name="Spawn2" parent="SpawnsMelee" index="1" instance=ExtResource( 3 )]
 position = Vector2( 461, 24 )

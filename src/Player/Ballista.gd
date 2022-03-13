@@ -44,3 +44,4 @@ func _on_VectorCreator_vector_created(vector: Vector2, speed: float) -> void:
 	instance.velocity = vector.normalized() * speed
 	instance.rotation = Kata.rotation
 	get_tree().current_scene.add_child(instance)
+	GlobalStatistics.increment_strikes()
