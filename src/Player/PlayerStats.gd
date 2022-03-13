@@ -4,6 +4,9 @@ class_name PlayerStatsClass
 #armor info shoud be here
 var max_health := 100
 var health := max_health setget set_health
+var armor := 1.0
+var armor_coefficient := 1.0
+var armor_type := 'none'
 
 signal player_died
 
@@ -13,4 +16,6 @@ func set_health(value: int) -> void:
 		emit_signal("player_died")
 
 func take_damage(damage: float, attack_type: String) -> void:
-	print('Player got damage ', damage, attack_type)
+	var final_damage = Utils.calc_damage(damage, armor, armor_coefficient, attack_type, armor_type)
+	health -= final_damage
+	print('Player got damage ', final_damage)
