@@ -110,9 +110,6 @@ position = Vector2( -20, 4 )
 position = Vector2( 461, 24 )
 enemies = [ ExtResource( 7 ), ExtResource( 7 ) ]
 
-[node name="PathFollow2D" parent="SpawnsMelee/Spawn2/Path2D" index="0"]
-position = Vector2( -2, 10 )
-
 [node name="SpawnsRange" parent="." index="4"]
 position = Vector2( 13, 107 )
 

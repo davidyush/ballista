@@ -4,6 +4,8 @@
 [ext_resource path="res://src/Enemy/EnemyMelee/EnemyMelee.tscn" type="PackedScene" id=2]
 
 [node name="Infantryman" instance=ExtResource( 2 )]
+speed = 20.0
+damage = 1.2
 armor = 0.2
 armor_coefficient = 1.1
 
