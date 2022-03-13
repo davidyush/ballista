@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	$LabelStrikes.text = "Strikes: " + str(GlobalStatistics.stirkes)
+	$LabelStrikes.text = "Strikes: " + str(GlobalStatistics.strikes)
 	$LabelHits.text = "Hits: " + str(GlobalStatistics.hits)
 
 
