@@ -3,7 +3,7 @@ extends Area2D
 onready var line := $Line2D
 onready var ballista_line := $BallistaLine
 
-signal vector_created(vector)
+signal vector_created(vector, distance)
 
 var MainInstances = ResourceLoader.MainInstances
 
