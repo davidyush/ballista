@@ -18,6 +18,8 @@ func release_bullet() -> void:
 
 func _on_died_Player() -> void:
 	print('player is dead')
+	GlobalStatistics.is_player_died = true
+	get_tree().change_scene("res://src/Menus/EndScreen.tscn")
 	queue_free()
 
 func _ready() -> void:

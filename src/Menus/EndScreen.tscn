@@ -34,12 +34,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 180.0
-margin_top = 71.0
-margin_right = 292.0
-margin_bottom = 87.0
+margin_left = 141.0
+margin_top = 73.0
+margin_right = 341.0
+margin_bottom = 89.0
 custom_fonts/font = SubResource( 1 )
 text = "The end"
+align = 1
 
 [node name="LabelStrikes" type="Label" parent="."]
 margin_left = 183.0
@@ -48,6 +49,7 @@ margin_right = 223.0
 margin_bottom = 117.0
 custom_fonts/font = SubResource( 2 )
 text = "Strikes: "
+align = 1
 
 [node name="LabelHits" type="Label" parent="."]
 margin_left = 183.0
@@ -56,6 +58,7 @@ margin_right = 279.0
 margin_bottom = 140.0
 custom_fonts/font = SubResource( 3 )
 text = "hits: "
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,6 +70,7 @@ margin_right = 280.0
 margin_bottom = 161.0
 custom_fonts/font = SubResource( 3 )
 text = "time: "
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

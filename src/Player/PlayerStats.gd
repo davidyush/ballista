@@ -4,7 +4,7 @@ class_name PlayerStatsClass
 #armor info shoud be here
 var max_health := 100
 var health := max_health setget set_health
-var armor := 1.0
+var armor := 0.1
 var armor_coefficient := 1.0
 var armor_type := 'none'
 
