@@ -12,9 +12,9 @@
 [ext_resource path="res://src/Tiles/Trees.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Tiles/Logs.tscn" type="PackedScene" id=11]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=4]
 _data = {
-"points": PoolVector2Array( 0, 4.00904, 0, -4.00904, -20, 4, -0.306851, -10.9172, 0.306851, 10.9172, 26, 15, 0.182905, -14.6844, -0.182905, 14.6844, -19, 42, -0.834275, -8.6765, 0.834275, 8.6765, 25, 61, 0.169117, -10.6848, -0.169117, 10.6848, -18, 86, 0.999622, -10.9022, -0.999622, 10.9022, 25, 110, -0.0530945, -9.95797, 0.0530945, 9.95797, -19, 124, 0.227413, -9.26769, -0.227413, 9.26769, 24, 148, -0.431475, -10.3505, 0.431475, 10.3505, -16, 169, 0.050164, -10.9943, -0.050164, 10.9943, 23, 187, 0.449397, -10.5023, -0.449397, 10.5023, -18, 210, -0.184564, -11.7076, 0.184564, 11.7076, 27, 226, -0.963492, -7.45845, 0.963492, 7.45845, -13, 236, 0, 0, 0, 0, 3, 249, 0, 0, 0, 0, 20, 252 )
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 11, 246 )
 }
 
 [sub_resource type="Curve2D" id=3]
@@ -106,7 +106,7 @@ enemies = [ ExtResource( 2 ) ]
 
 [node name="Path2D" parent="SpawnsMelee/Spawn" index="0"]
 position = Vector2( -1, -12 )
-curve = SubResource( 1 )
+curve = SubResource( 4 )
 
 [node name="PathFollow2D" parent="SpawnsMelee/Spawn/Path2D" index="0"]
 position = Vector2( -20, 4 )
@@ -119,7 +119,7 @@ enemies = [ ExtResource( 7 ), ExtResource( 7 ) ]
 curve = SubResource( 3 )
 
 [node name="PathFollow2D" parent="SpawnsMelee/Spawn2/Path2D" index="0"]
-position = Vector2( 0, -1 )
+position = Vector2( 21, -17 )
 
 [node name="SpawnsRange" parent="." index="4"]
 position = Vector2( 13, 107 )

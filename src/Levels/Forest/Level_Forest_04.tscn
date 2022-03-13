@@ -210,6 +210,9 @@ enemies = [ ExtResource( 6 ), ExtResource( 6 ) ]
 position = Vector2( 1, 0 )
 curve = SubResource( 16 )
 
+[node name="PathFollow2D" parent="SpawnsMelee/Spawn10/Path2D" index="0"]
+position = Vector2( 4, 10 )
+
 [node name="Trees_Upper_layer_2" parent="." index="2" instance=ExtResource( 7 )]
 scale = Vector2( 0.9, 0.7 )
 tile_data = PoolIntArray( 458775, 0, 0 )
