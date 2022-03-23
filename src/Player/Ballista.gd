@@ -42,8 +42,9 @@ func _on_Hurtbox_hit(damage: float, attack_type: String) -> void:
 func _on_VectorCreator_vector_created(vector: Vector2, speed: float) -> void:
 	var instance = Utils.create_instance(BulletPlayer, Muzzle.global_position)
 	release_bullet()
-	instance.life_time =  (speed / cos(PI/4.0) / 1.7 ) * sin(PI/4.0) / 100.0
-	instance.velocity = vector.normalized() * speed
+	speed = clamp(speed, 1.0, 387.0)
+	instance.life_time = speed * 0.0033 
+	instance.velocity = vector.normalized() * speed * 0.8427
 	print('life_time ', instance.life_time)
 	print('speed (distance) ', speed)
 	print('vector ', vector)
