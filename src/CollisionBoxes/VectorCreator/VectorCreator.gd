@@ -19,7 +19,7 @@ func _ready() -> void:
 	connect("input_event", self, "_on_input_event")
 
 func _physics_process(delta: float) -> void:
-	if position_end != Vector2.ZERO:
+	if false:
 		line.points = [position_start - global_position, position_end - global_position]
 		distance = position_end.distance_to(position_start)
 		line.default_color = Color.orange
