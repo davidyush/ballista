@@ -33,6 +33,7 @@ func _on_Timer_timeout() -> void:
 		var pathFollow = PathFollow2D.new()
 		pathFollow.add_child(EnemyScene.instance())
 		pathFollow.loop = false
+		pathFollow.rotate = false
 		Path.add_child(pathFollow)
 		current_iteration += 1
 	else:
