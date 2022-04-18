@@ -10,6 +10,7 @@ var enemies_count := 0
 var current_index := 0
 var current_speed := 0
 var current_instance :KinematicBody2D = null
+var ordinary := true
 
 func _ready() -> void:
 	enemies_count = enemies.size()

@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		position_end = get_viewport().get_mouse_position() - global_position
 		distance = min(position_start.distance_to(position_end), max_distance) 
 		norm_vector = position_start.direction_to(MainInstances.Player.position)
-	#	_draw_line(line, position_start, position_end, Color.orange)
+		#_draw_line(line, position_start, position_end, Color.orange)
 		_draw_line(line2, position_start, position_start + norm_vector * distance, Color.aqua)
 		print(global_position)
 

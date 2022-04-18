@@ -21,5 +21,8 @@ func _on_Hurtbox_hit(_damage: float, _attack_type: String) -> void:
 	if health <= 0.0:
 		is_dead = true
 		var spawn = Utils.get_parent_by_name(self, 'Spawn')
-		spawn.set_next()
+		if spawn.ordinary:
+			spawn.set_next()
+		else:
+			spawn.check_emptiness()
 		queue_free()
