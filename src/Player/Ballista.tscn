@@ -18,7 +18,6 @@ __meta__ = {
 }
 
 [node name="Kata" type="KinematicBody2D" parent="."]
-collision_layer = 0
 collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="Kata"]
