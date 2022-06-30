@@ -32,9 +32,6 @@ position = Vector2( 224, 256 )
 
 [node name="Ballista" parent="Placer/Container" index="0" instance=ExtResource( 2 )]
 
-[node name="VectorCreator" parent="Placer/Container/Ballista" index="1"]
-position = Vector2( 16, -120 )
-
 [node name="MeleeAtackArea" parent="." instance=ExtResource( 5 )]
 position = Vector2( 256, 240 )
 
@@ -50,5 +47,4 @@ autostart = true
 [editable path="Placer"]
 [editable path="Placer/Container/Ballista"]
 [editable path="Placer/Container/Ballista/Kata/Hurtbox"]
-[editable path="Placer/Container/Ballista/VectorCreator"]
 [editable path="MeleeAtackArea"]

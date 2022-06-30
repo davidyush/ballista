@@ -16,5 +16,4 @@ is_looped = true
 [editable path="Placer"]
 [editable path="Placer/Container/Ballista"]
 [editable path="Placer/Container/Ballista/Kata/Hurtbox"]
-[editable path="Placer/Container/Ballista/VectorCreator"]
 [editable path="MeleeAtackArea"]

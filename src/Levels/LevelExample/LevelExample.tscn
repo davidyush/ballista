@@ -402,10 +402,6 @@ modulate = Color( 1, 0.0941176, 0.0941176, 1 )
 
 [node name="Cata" parent="Placer/Container" index="0" instance=ExtResource( 2 )]
 
-[node name="VectorCreator" parent="Placer/Container/Cata" index="1"]
-visible = false
-position = Vector2( 33, -123 )
-
 [node name="MeleeAtackArea" parent="." instance=ExtResource( 5 )]
 position = Vector2( 222, 235 )
 
@@ -416,4 +412,3 @@ position = Vector2( 222, 235 )
 [editable path="Placer"]
 [editable path="Placer/Container/Cata"]
 [editable path="Placer/Container/Cata/Kata/Hurtbox"]
-[editable path="Placer/Container/Cata/VectorCreator"]
