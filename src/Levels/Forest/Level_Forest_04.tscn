@@ -320,6 +320,5 @@ position = Vector2( 6, 0 )
 [editable path="SpawnsRange/Spawn6"]
 [editable path="Placer"]
 [editable path="Placer/Container/Ballista"]
-[editable path="Placer/Container/Ballista/Kata/Hurtbox"]
-[editable path="Placer/Container/Ballista/VectorCreator"]
+[editable path="Placer/Container/Ballista/BallistaBody/Hurtbox"]
 [editable path="MeleeAtackArea"]

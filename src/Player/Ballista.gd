@@ -5,8 +5,8 @@ const BulletPlayer := preload("res://src/Bullets/BulletPlayer/BulletPlayer.tscn"
 var PlayerStats = ResourceLoader.PlayerStats
 var MainInstances = ResourceLoader.MainInstances
 
-onready var Kata := $Kata
-onready var Muzzle := $Kata/Muzzle
+onready var BallistaBody := $BallistaBody
+onready var Muzzle := $BallistaBody/Muzzle
 
 var is_changing_rotation = true
 
@@ -29,7 +29,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if is_changing_rotation:
 		var _rotation := get_local_mouse_position().angle()
-		Kata.rotation_degrees = int(rad2deg(_rotation))
+		BallistaBody.rotation_degrees = int(rad2deg(_rotation))
 	if Input.is_action_just_pressed("click"):
 		start_bullet()
 
@@ -47,6 +47,6 @@ func _on_LineCreator_line_created(vector: Vector2, speed: float) -> void:
 	print('life_time ', instance.life_time)
 	print('speed (distance) ', speed)
 	print('vector ', vector)
-	instance.rotation = Kata.rotation
+	instance.rotation = BallistaBody.rotation
 	get_tree().current_scene.add_child(instance)
 	GlobalStatistics.increment_strikes()
