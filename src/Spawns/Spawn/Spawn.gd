@@ -27,6 +27,9 @@ func set_enemy(index: int) -> void:
 	path_follow.add_child(current_instance)
 
 func set_next() -> void:
+	var Level = Utils.get_parent_by_name(self, 'Level')
+	if current_instance.is_dead:
+		Level.increment_deads()
 	if current_instance != null and current_instance.is_dead:
 		path_follow.offset = 0
 		current_speed = 0.0
@@ -34,6 +37,5 @@ func set_next() -> void:
 			current_index += 1
 			set_enemy(current_index)
 		else:
-			var level = Utils.get_parent_by_name(self, 'Level')
-			level.is_level_completed()
+			Level.is_level_completed()
 			queue_free()

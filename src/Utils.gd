@@ -46,3 +46,11 @@ func get_parent_by_name(current_node: Node, name: String) -> Node:
 		else:
 			current_parent = current_parent.get_parent()
 	return null
+
+
+func get_enemies_count(spawn: Node) -> int:
+	var count := 0
+	var children = spawn.get_children()
+	for child in children:
+		count += child.enemies.size()
+	return count
