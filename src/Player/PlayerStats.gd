@@ -2,8 +2,8 @@ extends Resource
 class_name PlayerStatsClass
 
 #armor info shoud be here
-var max_health := 100
-var health := max_health setget set_health
+var max_health := 10.0
+var health := max_health
 var armor := 0.1
 var armor_coefficient := 1.0
 var armor_type := 'none'
@@ -17,5 +17,4 @@ func set_health(value: int) -> void:
 
 func take_damage(damage: float, attack_type: String) -> void:
 	var final_damage = Utils.calc_damage(damage, armor, armor_coefficient, attack_type, armor_type)
-	health -= final_damage
-	print('Player got damage ', final_damage)
+	set_health(health - final_damage)
