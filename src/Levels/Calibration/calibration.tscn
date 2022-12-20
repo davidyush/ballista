@@ -15,5 +15,5 @@ is_looped = true
 [editable path="SpawnsMelee/Spawn"]
 [editable path="Placer"]
 [editable path="Placer/Container/Ballista"]
-[editable path="Placer/Container/Ballista/Kata/Hurtbox"]
+[editable path="Placer/Container/Ballista/BallistaBody/Hurtbox"]
 [editable path="MeleeAtackArea"]
