@@ -34,7 +34,6 @@ func get_point(point_position: Vector2) -> int:
 
 func get_used_cell_global_positions() -> Array:
 	var cells = get_used_cells()
-	#print(cells)
 	var cell_positions := []
 	for cell in cells:
 		var cell_position := global_position + map_to_world(cell)

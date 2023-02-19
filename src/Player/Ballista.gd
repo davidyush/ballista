@@ -44,9 +44,6 @@ func _on_LineCreator_line_created(vector: Vector2, speed: float) -> void:
 	release_bullet()
 	instance.life_time = speed * 0.006
 	instance.velocity = vector.normalized() * speed * 1.4045
-	print('life_time ', instance.life_time)
-	print('speed (distance) ', speed)
-	print('vector ', vector)
 	instance.rotation = BallistaBody.rotation
 	get_tree().current_scene.add_child(instance)
 	GlobalStatistics.increment_strikes()

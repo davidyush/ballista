@@ -28,7 +28,6 @@ func _physics_process(delta: float) -> void:
 		norm_vector = position_start.direction_to(MainInstances.Player.position)
 		#_draw_line(line, position_start, position_end, Color.orange)
 		_draw_line(line2, position_start, position_start + norm_vector * distance, Color.aqua)
-		print(global_position)
 
 func _draw_line(node: Line2D, start: Vector2, end: Vector2, color: Color) -> void:
 	node.points = [start, end]
