@@ -64,7 +64,6 @@ GlobalStatistics="*res://src/GlobalVars/GlobalStats.gd"
 
 window/size/width=480
 window/size/height=270
-window/size/always_on_top=true
 window/size/test_width=1280
 window/size/test_height=720
 mouse_cursor/custom_image="res://src/assets/Aim2.png"
