@@ -9,8 +9,15 @@ script = ExtResource( 2 )
 [node name="Sprite" parent="." index="0"]
 scale = Vector2( 1, 1 )
 
-[node name="Timer" type="Timer" parent="." index="3"]
+[node name="AttackTimer" type="Timer" parent="." index="3"]
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="4"]
+path_desired_distance = 20.0
+
+[node name="PathTimer" type="Timer" parent="." index="5"]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_Timer_timeout"]
 
 [editable path="Hurtbox"]

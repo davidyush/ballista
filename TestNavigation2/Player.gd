@@ -4,7 +4,7 @@ var speed = 100
 var friction = 0.18
 var _velocity := Vector2.ZERO
 
-onready var obstacle = $'../Navigation2D/NavigationPolygonInstance4'
+onready var to_be_remove = $'../sometghing'
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2(
@@ -20,4 +20,4 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed('click'):
-		obstacle.queue_free()
+		to_be_remove.queue_free()

@@ -16,8 +16,12 @@ func increment_deads() -> void:
 
 
 func _ready() -> void:
-	var melee_count := Utils.get_enemies_count(SpawnsMelee)
-	var range_count := Utils.get_enemies_count(SpawnsRange)
+	var melee_count = 0
+	var range_count = 0
+	if SpawnsMelee != null:
+		melee_count = Utils.get_enemies_count(SpawnsMelee)
+	if SpawnsRange != null:
+		range_count = Utils.get_enemies_count(SpawnsRange)
 	enemies_count = melee_count + range_count
 	LevelUI.set_label_enemies(current_kills, enemies_count)
 

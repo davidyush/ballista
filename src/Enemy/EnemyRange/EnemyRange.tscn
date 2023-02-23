@@ -5,6 +5,8 @@
 
 [node name="EnemyRange" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+Bullet = null
+bullet_speed = 50.0
 
 [node name="Timer" type="Timer" parent="." index="3"]
 autostart = true

@@ -52,5 +52,6 @@ func get_enemies_count(spawn: Node) -> int:
 	var count := 0
 	var children = spawn.get_children()
 	for child in children:
-		count += child.enemies.size()
+		if 'enemies' in child:
+			count += child.enemies.size()
 	return count
