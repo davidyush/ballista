@@ -25,6 +25,7 @@ func start_attacking() -> void:
 func _physics_process(delta: float) -> void:
 	if navigation_agent.is_navigation_finished():
 		start_attacking()
+		return
 
 	var direction = global_position.direction_to(navigation_agent.get_next_location())
 	var desired_velocity = direction * speed
@@ -35,4 +36,5 @@ func _physics_process(delta: float) -> void:
 	
 	
 func _on_Timer_timeout() -> void:
+	print('bump')
 	PlayerStats.take_damage(damage, attack_type)

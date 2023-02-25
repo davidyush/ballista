@@ -12,7 +12,7 @@ scale = Vector2( 1, 1 )
 [node name="AttackTimer" type="Timer" parent="." index="3"]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="4"]
-path_desired_distance = 20.0
+path_desired_distance = 30.0
 
 [node name="PathTimer" type="Timer" parent="." index="5"]
 wait_time = 0.1

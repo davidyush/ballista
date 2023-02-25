@@ -1,6 +1,6 @@
 extends Node2D
 
-var MARGIN_CONNECTION = 10
+const MARGIN_CONNECTION = 10
 
 func _ready() -> void:
 	Navigation2DServer.map_set_edge_connection_margin(
