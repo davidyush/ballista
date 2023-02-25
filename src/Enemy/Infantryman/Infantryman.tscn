@@ -12,7 +12,4 @@ armor_coefficient = 1.1
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 1 )
 
-[node name="Timer" parent="." index="3"]
-wait_time = 1.6
-
 [editable path="Hurtbox"]
