@@ -16,4 +16,5 @@ func _on_Hurtbox_hit(_damage: float, _attack_type: String) -> void:
 	health -= final_damage
 	GlobalStatistics.increment_hits()
 	if health <= 0.0:
+		get_parent().increment_deaths()
 		queue_free()
