@@ -23,12 +23,12 @@ script = ExtResource( 2 )
 
 [node name="Trees" parent="Environment" instance=ExtResource( 9 )]
 
-[node name="NavigationPolygons" type="Node2D" parent="."]
-
 [node name="Placer" parent="." instance=ExtResource( 6 )]
 position = Vector2( 171, 254 )
 
 [node name="Ballista" parent="Placer/Container" index="0" instance=ExtResource( 1 )]
+
+[node name="NavigationPolygons" type="Node2D" parent="."]
 
 [node name="Spawns" type="Node2D" parent="."]
 
