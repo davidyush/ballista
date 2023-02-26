@@ -16,5 +16,6 @@ func set_health(value: int) -> void:
 		emit_signal("player_died")
 
 func take_damage(damage: float, attack_type: String) -> void:
+	print('player took damage', damage, attack_type)
 	var final_damage = Utils.calc_damage(damage, armor, armor_coefficient, attack_type, armor_type)
 	set_health(health - final_damage)

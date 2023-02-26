@@ -378,13 +378,13 @@ navpoly = SubResource( 3 )
 [node name="SpawnNavigation" parent="Spawns" instance=ExtResource( 4 )]
 position = Vector2( 55, 0 )
 unit = ExtResource( 7 )
-timers = [ 5.2, 2.5, 5.3 ]
+timers = [ 0.0, 2.5, 5.3 ]
 amount = 10
 
 [node name="SpawnNavigation2" parent="Spawns" instance=ExtResource( 4 )]
 position = Vector2( 353, -1 )
 unit = ExtResource( 13 )
-timers = [ 5.2, 0.9, 9.2 ]
+timers = [ 0.0, 0.9, 9.2 ]
 amount = 6
 
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
